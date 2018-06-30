@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup as bs
 
 # chcp 65001
 
-
 class stockPrice():
     def __init__(self, ticker, month, fields = None, title = None, data = None):
         self.ticker = str(ticker)
@@ -29,11 +28,10 @@ def printstockprice(dataSet):
         print("{:^15}|{:^15}".format(data[0],data[1]))
 
 tsmc2018DataSet = []
-for i in range(1,7):
+for i in range(1,2):
     tsmc2018DataSet.append(stockPrice(2330, "0"+str(i)))
     print("[ {} ]".format(tsmc2018DataSet[i-1].title))
     printstockprice(tsmc2018DataSet[i-1].data)
     print()
-
 
 
